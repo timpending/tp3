@@ -1,0 +1,8 @@
+.heroImg{
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),url("../../img/use/hero.jpeg") !important;
+  height:650px;
+}
