@@ -6,3 +6,7 @@
     ),url("../../img/use/hero.jpeg") !important;
   height:640px;
 }
+
+.text-white{
+  color: rgba(255, 255, 255, .8);
+}
