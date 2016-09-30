@@ -14,3 +14,7 @@
 .contact-icon > i:hover {
   color: #689797 !important;
 }
+
+.no-margin {
+  margin: 0;
+}
