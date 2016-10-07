@@ -108,60 +108,6 @@
         initSticky();
 
         /*==============================================
-         Flex slider init
-         ===============================================*/
-        $window.load(function () {
-            $(".portfolio-slider").flexslider({
-                animation: "slide",
-                direction: "vertical",
-                slideshowSpeed: 3000,
-                start: function () {
-                    imagesLoaded($(".portfolio"), function () {
-                        setTimeout(function () {
-                            $(".portfolio-filter li:eq(0) a").trigger("click");
-                        }, 500);
-                    });
-                }
-            });
-        });
-
-        $window.load(function () {
-            $(".portfolio-slider-alt").flexslider({
-                animation: "slide",
-                direction: "horizontal",
-                slideshowSpeed: 4000,
-                start: function () {
-                    imagesLoaded($(".portfolio"), function () {
-                        setTimeout(function () {
-                            $(".portfolio-filter li:eq(0) a").trigger("click");
-                        }, 500);
-                    });
-                }
-            });
-        });
-
-        $window.load(function () {
-            $(".post-slider-thumb").flexslider({
-                animation: "slide",
-                controlNav: "thumbnails"
-            });
-        });
-
-        $window.load(function () {
-            $(".post-slider").flexslider({
-                animation: "slide"
-            });
-        });
-
-        $window.load(function () {
-            $(".news-slider").flexslider({
-                animation: "slide",
-                slideshowSpeed: 3000
-            });
-        });
-
-
-        /*==============================================
          Full screen banner init
          ===============================================*/
         $window.bind("resizeEnd", function () {
@@ -177,34 +123,6 @@
 
 
         /*==============================================
-         Portfolio filterable grid init
-         ===============================================*/
-        var $portfolioGeneral = $(".portfolio:not(.portfolio-masonry)").isotope({
-            itemSelector: ".portfolio-item",
-            percentPosition: true,
-            layoutMode: "fitRows",
-            filter: "*"
-        });
-
-        var $portfolioMasonry = $(".portfolio-masonry").isotope({
-            itemSelector: ".portfolio-item",
-            percentPosition: true,
-            layoutMode: "masonry",
-            filter: "*"
-        });
-
-        if (typeof imagesLoaded == "function") {
-            $portfolioGeneral.imagesLoaded().progress(function () {
-                $portfolioGeneral.isotope("layout");
-            });
-
-            $portfolioMasonry.imagesLoaded().progress(function () {
-                $portfolioMasonry.isotope("layout");
-            });
-        }
-
-
-        /*==============================================
          Portfolio filter nav
          ===============================================*/
         $(".portfolio-filter").on("click", "a", function (event) {
@@ -212,51 +130,6 @@
             var $this = $(this);
             $this.parent().addClass("active").siblings().removeClass("active");
             $this.parents(".text-center").next().isotope({filter: $this.data("filter")});
-        });
-
-
-        /*==============================================
-         Portfolio item slider init
-         ===============================================*/
-        $(".portfolio-slider, .portfolio-slider-alt").each(function () { // the containers for all your galleries
-            var _items = $(this).find("li > a");
-            var items = [];
-            for (var i = 0; i < _items.length; i++) {
-                items.push({src: $(_items[i]).attr("href"), title: $(_items[i]).attr("title")});
-            }
-            $(this).parent().find(".action-btn").magnificPopup({
-                items: items,
-                type: "image",
-                gallery: {
-                    enabled: true
-                }
-            });
-            $(this).parent().find(".portfolio-description").magnificPopup({
-                items: items,
-                type: "image",
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-
-        /*==============================================
-         Portfolio popup gallery init
-         ===============================================*/
-        $(".portfolio-gallery").each(function () { // the containers for all your galleries
-            $(this).find(".popup-gallery").magnificPopup({
-                type: "image",
-                gallery: {
-                    enabled: true
-                }
-            });
-            $(this).find(".popup-gallery2").magnificPopup({
-                type: "image",
-                gallery: {
-                    enabled: true
-                }
-            });
         });
 
 
@@ -286,24 +159,6 @@
                 }
             }
         }
-
-
-        /*==============================================
-         Magnific popup init
-         ===============================================*/
-        $(".popup-link").magnificPopup({
-            type: "image"
-            // other options
-        });
-
-        $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
-            disableOn: 700,
-            type: "iframe",
-            mainClass: "mfp-fade",
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
-        });
 
 
         /*==============================================
@@ -399,85 +254,6 @@
 
 
         /*==============================================
-         Carousel init
-         ===============================================*/
-        if ($.fn.owlCarousel) {
-            $("#clients-1").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 6,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3]
-
-            });
-
-            $("#testimonial-2").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#testimonial-3").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#testimonial-4").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#testimonial-5").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#carousel-object").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
-                items: 1
-                //pagination : false
-            });
-
-            $("#owl-slider").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
-                items: 1,
-                navigation: true,
-                //pagination : false,
-                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-            });
-
-            $("#img-carousel").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 4,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3]
-
-            });
-
-            $("#portfolio-carousel").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3],
-                navigation: true,
-                pagination: false,
-                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-
-            });
-
-            $("#portfolio-carousel-alt").owlCarousel({
-                autoPlay: false, //Set AutoPlay to 3 seconds
-                items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3],
-                navigation: true,
-                pagination: false,
-                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-            });
-        }
-
-        $(".portfolio-with-title").addClass("portfolio");
-
-
-        /*==============================================
          Typist init
          ===============================================*/
         if (typeof Typist == "function") {
@@ -501,20 +277,6 @@
                 $liftOff.addClass("lift-off_hide").removeClass("lift-off_show");
             }
         });
-
-
-        /*==============================================
-         Mailchip init
-         ===============================================*/
-        if ($.fn.ajaxChimp) {
-            $(".mailchimp").ajaxChimp({
-                /**
-                 * Example mailchimp url
-                 * //blahblah.us1.list-manage.com/subscribe/post?u=5afsdhfuhdsiufdba6f8802&id=4djhfdsh9"
-                 */
-                url: "paste mailchimp url"
-            });
-        }
 
 
         /*==============================================
