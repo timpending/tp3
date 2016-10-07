@@ -305,6 +305,8 @@
          				//$('.alert--success').remove();
          				$submit.attr('disabled', false).val(defaultSubmitText);
          			}, 5000);
+              alert('Message submitted!');
+              $contactForm.children('input').val('');
          		},
          		error: function(err) {
          			//$contactForm.find('.alert--loading').hide();
