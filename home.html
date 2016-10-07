@@ -334,7 +334,12 @@
 
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
-                            <form target="_top" method="post" action="mailto:timpending@gmail.com" id="form" role="form" class="contact-comments">
+                            <form method="post" action="https://formspree.io/timpending@gmail.com" id="contactForm" role="form" class="contact-comments">
+                              <!-- Hidden Form Params -->
+                              <input type="text" name="_gotcha" style="display:none" />
+                              <input type="hidden" name="_subject" value="New timpending Website Email" />
+                              <input type="hidden" name="_next" value="//timpending.com" />
+
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <div class="form-group">
@@ -354,7 +359,7 @@
                                     <div class="col-md-6 form-group">
                                         <div class="form-group">
                                             <!-- Comment -->
-                                            <textarea name="text" id="text" class="cmnt-text form-control" placeholder="Comment" maxlength="400"></textarea>
+                                            <textarea name="comment" id="text" class="cmnt-text form-control" placeholder="Comment" maxlength="400"></textarea>
                                         </div>
                                         <div class="form-group full-width">
                                             <button type="submit" class="btn btn-small btn-dark-solid ">
@@ -400,9 +405,13 @@
         <!--footer 1 end-->
     </div>
 
+    <!-- Parsing Email -->
+    <script>
+      var contactform =  document.getElementById('contactForm');
+      contactform.setAttribute('action', '//formspree.io/' + 'ti' + 'mpen' + 'ding' + '@gm'+ 'ail.c'+'om')
+    </script>
 
-    <!-- inject:js -->
-
+    <!-- JavaScript -->
     <script src="assets/vendor/modernizr/modernizr.js"></script>
     <!-- Modernizer checks for new browsers to see if they can support Awesome new Features, and if not presents the other feature.  Doesnt look to be used in this SPI -->
     <script src="assets/vendor/jquery/jquery-1.10.2.min.js"></script>
@@ -430,6 +439,6 @@
     <script src="assets/vendor/wow/wow.min.js"></script>
     <!-- CSS Animations when scrolling -->
     <script src="assets/js/scripts.js"></script>
-    <!-- endinject -->
+    <!-- Javascript End -->
 </body>
 </html>
