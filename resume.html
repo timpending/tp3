@@ -3,9 +3,35 @@
    <head>
      <meta charset="utf-8">
      <title>timpending | Home</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <link rel="stylesheet" href="assets/css/use/resume.css" media="screen" title="Main Stylesheet">
    </head>
    <body>
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Timpending Site Contruction</h4>
+          </div>
+          <div class="modal-body">
+            Apologies for the inconvenience, but timpending.com is currently under construction.  Please enjoy Tim's wonderful resume in the meantime.  Note that all the projects are hyperlinked and still accessible to their deployed sites.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">OK!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
      <object class='resume' data="assets/img/use/TimPenderWebDevelopmentResume.pdf"></object>
+     <script
+			  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+			  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+			  crossorigin="anonymous"></script>
+     <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+     <script type='text/javascript'>
+      $('#myModal').modal('show')
+     </script>
    </body>
  </html>
