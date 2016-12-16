@@ -1,0 +1,47 @@
+.blue-steel {
+  background-color: rgba(34, 56, 73, 1) !important;
+}
+
+.blue-steel-text {
+  color: rgba(34, 56, 73, 1) !important;
+}
+
+.my-red{
+  background-color: rgba(184, 12, 9, 1) !important;
+}
+
+.my-red-text{
+  color: rgba(184, 12, 9, 1) !important;
+}
+
+
+.my-yellow {
+  background-color: rgba(244, 228, 9, 1) !important;
+}
+
+.my-yellow-text {
+  color: rgba(244, 228, 9, 1) !important;
+}
+
+.my-green {
+  background-color: rgba(39, 230, 188, 1) !important;
+}
+.my-green-text {
+  color: rgba(39, 230, 188, 1) !important;
+}
+
+.my-blue {
+  background-color: rgba(28, 119, 195, 255) !important;
+}
+
+.my-blue-text {
+  color: rgba(28, 119, 195, 1) !important;
+}
+
+.my-white {
+    background-color: rgba(249, 254, 255, 1) !important;
+}
+
+.my-white-text {
+    color: rgba(249, 254, 255, 1) !important;
+}

@@ -1,0 +1,38 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ @font-face {
+   font-family: "Lato";
+   src: url("../fonts/lato/Lato-Light.ttf") format("truetype");
+   font-weight: 300;
+ }
+
+ @font-face {
+   font-family: "Lato";
+   src: url("../fonts/lato/Lato-Regular.ttf") format("truetype");
+   font-weight: 400;
+ }
+
+ @font-face {
+   font-family: "Lato";
+   src: url("../fonts/lato/Lato-Medium.ttf") format("truetype");
+   font-weight: 500;
+ }
+
+ @font-face {
+   font-family: "Lato";
+   src: url("../fonts/lato/Lato-Bold.ttf") format("truetype");
+   font-weight: 700;
+ }
+
+/* Icon padding from Materialize */
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
