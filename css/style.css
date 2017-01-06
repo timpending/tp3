@@ -96,7 +96,7 @@ nav {
 }
 .parallax img{
   display: flex;
-  filter: brightness(90%) blur(5px);
+  filter: brightness(90%);
 }
 
 .hero-wave {
